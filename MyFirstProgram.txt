@@ -1,0 +1,44 @@
+// MyFirstProgram
+
+package localrepo.myfirstprogram;
+import java.util.Scanner; //Library/Module
+/**
+ *
+ * @author Huawei
+ */
+public class MyFirstProgram {
+
+    public static void main(String[] args) {
+        int num1,num2; //for numbers
+        String Gname,Mname,Lname; //for inputs
+        
+        Scanner scan = new Scanner(System.in); //calling
+        
+        //User inputs
+        System.out.print("Name: ");
+        Gname=scan.nextLine();
+        System.out.print("Middle name / Initial: ");
+        Mname=scan.nextLine();
+        System.out.print("Surname: ");
+        Lname=scan.nextLine();
+        
+        //Output for Inputs
+        System.out.println("Hello " + Lname + " " + Gname + " " + Mname);
+        
+        //for computation/numbers
+        System.out.print("Enter a number: ");
+        num1=scan.nextInt();
+        System.out.print("Enter a number: ");
+        num2=scan.nextInt();
+        
+        //Outputs for number/computation
+        int sum=num1+num2;
+        System.out.println("Total: " + sum);
+        
+        int prod=num1*num2;
+        System.out.println("Product: " + prod);
+        
+        int quot=num1/num2;
+        System.out.println("Quotient: " + quot);
+    }
+}
