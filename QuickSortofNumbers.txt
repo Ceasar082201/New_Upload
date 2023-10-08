@@ -1,0 +1,59 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package localrepo.quicksortofnumbers;
+import java.util.Scanner; //module used
+/**
+ *
+ * @author Huawei
+ */
+public class QuickSortofNumbers {
+    
+    public static void main(String[] args) {
+      
+        int number,sumpositive,largestpositive,lowestpositive,largestnegative,lowestnegative,size;
+        
+       Scanner sc =new Scanner(System.in); //for inputs
+       
+        System.out.println("Enter number of Elements: ");
+        size=sc.nextInt();
+        
+        int[]array=new int[size];
+        for(int i = 0; i < size; i++){
+            System.out.println("Enter elemnt["+i+"]: ");
+            array[i] = sc.nextInt();
+        }
+        sumpositive = 0;
+        largestpositive = Integer.MAX_VALUE;
+        lowestpositive = Integer.MIN_VALUE;
+        largestnegative = Integer.MAX_VALUE;
+        lowestnegative = Integer.MIN_VALUE;
+        
+        for(int i = 0; i < size; i++){
+            number=array[i];
+          if(number >0){
+              sumpositive += number;
+              if(number > largestpositive){
+                  largestpositive = number;
+              }
+              if(number < lowestpositive){
+                  lowestpositive = number;
+              }
+          }  else if(number < 0){
+              if(number > largestnegative){
+                  largestnegative = number;
+              }
+              if(number < lowestnegative){
+               lowestnegative = number;   
+              }
+        }
+    }
+        System.out.println("Sum of positive  numbers: " + sumpositive);
+        System.out.println("Largest positive number: "+ largestpositive);
+        System.out.println("Lowest positive number: "+ lowestpositive);
+        System.out.println("Largest negative number: "+ largestnegative);
+        System.out.println("Largest negative number: "+ lowestnegative);
+    }
+}
